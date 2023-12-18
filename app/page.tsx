@@ -30,7 +30,7 @@ export default async function Home() {
     <div className="w-screen h-screen bg-slate-900 flex justify-center items-center">
       <div className="w-4/5">
         <div className="text-indigo-500 text-6xl text-justify quote-font">
-          <h1 className={quote_font.className}>" {quote.quote} "</h1>
+          <h1 className={quote_font.className}>&#34; {quote.quote} &#34;</h1>
         </div>
         <div className="text-indigo-700 text-4xl text-right mt-4 character-font">
           <h2 className={character_font.className}>-{quote.character}-</h2>
