@@ -18,14 +18,14 @@ const anime_font = Sevillana({
   subsets: ["latin"],
 });
 
-async function fetchQuote() {
+function fetchQuote() {
   let num = Math.floor(Math.random() * 121);
   let quote = quotedb[num];
   return quote;
 }
 
-export default async function Home() {
-  let quote = await fetchQuote();
+export default function Home() {
+  let quote = fetchQuote();
   return (
     <div className="w-screen h-screen bg-slate-900 flex justify-center items-center">
       <div className="w-4/5">
