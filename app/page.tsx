@@ -1,4 +1,5 @@
 import { Elsie_Swash_Caps, Vesper_Libre, Sevillana } from "next/font/google";
+import { quotedb } from "./db";
 
 const quote_font = Elsie_Swash_Caps({
   weight: "900",
@@ -16,17 +17,13 @@ const anime_font = Sevillana({
 });
 
 async function fetchQuote() {
-  let res = await fetch(
-    "https://random-anime-quote-api.onrender.com/random-anime-quote",
-    { cache: "no-store" }
-  );
-  let quote = res.json();
+  const num = Math.floor(Math.random() * 121);
+  const quote = quotedb[num];
   return quote;
 }
 
 export default async function Home() {
-  await fetch("https://random-anime-quote-api.onrender.com");
-  let quote = await fetchQuote();
+  const quote = await fetchQuote();
   return (
     <div className="w-screen h-screen bg-slate-900 flex justify-center items-center">
       <div className="w-4/5">
