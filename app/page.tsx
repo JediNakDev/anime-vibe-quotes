@@ -1,3 +1,5 @@
+"use client";
+
 import { Elsie_Swash_Caps, Vesper_Libre, Sevillana } from "next/font/google";
 import { quotedb } from "./db";
 
